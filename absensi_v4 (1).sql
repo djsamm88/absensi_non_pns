@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 02, 2020 at 05:52 AM
+-- Generation Time: Jan 02, 2020 at 06:14 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 5.6.40
 
@@ -67,6 +67,19 @@ INSERT INTO `tbl_departemen` (`id`, `departemen`) VALUES
 (87, 'DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN'),
 (88, 'DINAS PENANAMAN MODAL DAN PELAYANAN TERPADU SATU PINTU'),
 (89, 'DINAS KOPERASI, USAHA MIKRO, KECIL DAN MENENGAH');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_ijin`
+--
+
+CREATE TABLE `tbl_ijin` (
+  `id` int(11) NOT NULL,
+  `id_pegawai` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -143,6 +156,12 @@ ALTER TABLE `tbl_departemen`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_ijin`
+--
+ALTER TABLE `tbl_ijin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_jabatan`
 --
 ALTER TABLE `tbl_jabatan`
@@ -169,6 +188,12 @@ ALTER TABLE `tbl_pegawai`
 --
 ALTER TABLE `tbl_departemen`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+
+--
+-- AUTO_INCREMENT for table `tbl_ijin`
+--
+ALTER TABLE `tbl_ijin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_jabatan`
